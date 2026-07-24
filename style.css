@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8dccb;
+    color: #171717;
+}
+
+/* Cover Page */
+
+.cover {
+    min-height: 100vh;
+    padding: 80px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #e8dccb;
+}
+
+.small-title {
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #55504a;
+}
+
+.cover h1 {
+    font-size: 65px;
+    line-height: 1.05;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 20px;
+    color: #55504a;
+    margin-bottom: 40px;
+}
+
+.start-button {
+    width: fit-content;
+    text-decoration: none;
+    background-color: #171717;
+    color: #e8dccb;
+    padding: 16px 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.start-button:hover {
+    background-color: #55504a;
+    transform: translateX(8px);
+}
+
+
+/* Second Page */
+
+.content {
+    min-height: 100vh;
+    padding: 80px 10%;
+    background-color: #f2eadf;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.content > p:not(.small-title) {
+    max-width: 850px;
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #44403b;
+}
+
+.content h2 {
+    margin-top: 45px;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.applications {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.box {
+    background-color: #171717;
+    color: #e8dccb;
+    padding: 25px;
+    width: 250px;
+    min-height: 150px;
+}
+
+.box h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.box p {
+    line-height: 1.5;
+    color: #ddd0c0;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 45px;
+    text-decoration: none;
+    background-color: #171717;
+    color: #e8dccb;
+    padding: 15px 25px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background-color: #55504a;
+}
