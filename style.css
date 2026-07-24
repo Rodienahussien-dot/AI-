@@ -1,132 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e8dccb;
-    color: #171717;
+    font-family: 'Montserrat', sans-serif;
+    background: #0d0b0a;
+    color: #f1e7d8;
 }
 
-/* Cover Page */
 
-.cover {
+/* ================= COVER PAGE ================= */
+
+.cover-page {
     min-height: 100vh;
-    padding: 80px 10%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #e8dccb;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    background:
+        radial-gradient(circle at 80% 50%, #3b281e 0%, #17110e 35%, #0d0b0a 70%);
 }
+
+
+.cover-content {
+    max-width: 600px;
+}
+
 
 .small-title {
-    font-size: 14px;
+    color: #b99870;
+    font-size: 13px;
     letter-spacing: 4px;
-    font-weight: bold;
     margin-bottom: 25px;
-    color: #55504a;
 }
 
-.cover h1 {
-    font-size: 65px;
+
+h1 {
+    font-size: 64px;
     line-height: 1.05;
     letter-spacing: 3px;
-    margin-bottom: 25px;
+    font-weight: 800;
 }
+
+
+h1 span {
+    color: #b99870;
+}
+
 
 .description {
-    font-size: 20px;
-    color: #55504a;
-    margin-bottom: 40px;
+    margin-top: 25px;
+    color: #b9aaa0;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
-.start-button {
-    width: fit-content;
-    text-decoration: none;
-    background-color: #171717;
-    color: #e8dccb;
+
+.explore-btn {
+    display: inline-block;
+    margin-top: 40px;
     padding: 16px 28px;
-    font-weight: bold;
-    letter-spacing: 1px;
-
-    cursor: pointer;
-
+    border: 1px solid #b99870;
+    color: #f1e7d8;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 12px;
     transition: 0.3s;
 }
 
-.start-button:hover {
-    background-color: #55504a;
-    transform: translateX(8px);
+
+.explore-btn span {
+    margin-left: 20px;
+    color: #b99870;
 }
 
 
-/* Second Page */
-
-.content {
-    min-height: 100vh;
-    padding: 80px 10%;
-    background-color: #f2eadf;
+.explore-btn:hover {
+    background: #b99870;
+    color: #0d0b0a;
 }
 
-.content h1 {
-    font-size: 48px;
-    margin-bottom: 30px;
+
+/* ================= AI CIRCLE ================= */
+
+.ai-circle {
+    width: 280px;
+    height: 280px;
+    border: 1px solid #b99870;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 50px #3b281e;
 }
 
-.content > p:not(.small-title) {
-    max-width: 850px;
-    font-size: 19px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #44403b;
+
+.ai-circle::before {
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    border: 1px solid #6f5039;
+    border-radius: 50%;
 }
 
-.content h2 {
-    margin-top: 45px;
+
+.ai-symbol {
+    font-size: 65px;
+    font-weight: 800;
+    color: #b99870;
+    z-index: 2;
+}
+
+
+.circle-text {
+    position: absolute;
+    top: -35px;
+    color: #8d7764;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+
+/* ================= PROJECT PAGE ================= */
+
+.project-header {
+    padding: 35px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #33261e;
+}
+
+
+.project-header p {
+    color: #8d7764;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+
+.back-btn {
+    color: #b99870;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+.topic-section {
+    max-width: 950px;
+    margin: auto;
+    padding: 100px 30px 70px;
+}
+
+
+.section-label {
+    color: #b99870;
+    font-size: 11px;
+    letter-spacing: 4px;
     margin-bottom: 25px;
-    font-size: 30px;
 }
+
+
+.topic-section h1 {
+    font-size: 48px;
+    margin-bottom: 35px;
+}
+
+
+.main-text {
+    max-width: 850px;
+    color: #b9aaa0;
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+
+/* ================= APPLICATIONS ================= */
 
 .applications {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    padding: 70px 8%;
+    background: #15100d;
 }
 
-.box {
-    background-color: #171717;
-    color: #e8dccb;
-    padding: 25px;
-    width: 250px;
-    min-height: 150px;
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
-.box h3 {
+
+.card {
+    padding: 35px;
+    min-height: 230px;
+    border: 1px solid #3a2b22;
+    background: linear-gradient(145deg, #211812, #120e0c);
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #b99870;
+}
+
+
+.card-icon {
+    font-size: 35px;
+    color: #b99870;
+    margin-bottom: 25px;
+}
+
+
+.card h2 {
+    color: #f1e7d8;
     margin-bottom: 15px;
     font-size: 22px;
 }
 
-.box p {
-    line-height: 1.5;
-    color: #ddd0c0;
+
+.card p {
+    color: #a99b91;
+    line-height: 1.8;
+    font-size: 14px;
 }
 
-.back-button {
-    display: inline-block;
-    margin-top: 45px;
-    text-decoration: none;
-    background-color: #171717;
-    color: #e8dccb;
-    padding: 15px 25px;
-    font-weight: bold;
 
-    cursor: pointer;
+/* ================= FOOTER ================= */
 
-    transition: 0.3s;
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #66564b;
+    font-size: 9px;
+    letter-spacing: 3px;
 }
 
-.back-button:hover {
-    background-color: #55504a;
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .cover-page {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 70px;
+        padding: 40px 25px;
+    }
+
+
+    h1 {
+        font-size: 45px;
+    }
+
+
+    .ai-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+
+    .ai-circle::before {
+        width: 165px;
+
+    height: 165px;
+    }
+
+
+    .project-header {
+        padding: 25px 20px;
+    }
+
+
+    .project-header p {
+        display: none;
+    }
+
+
+    .topic-section h1 {
+        font-size: 35px;
+    }
+
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
 }
